@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coversosr de tramperatura</title>
+</head>
+<body>
+    <h1>
+        Conversor de Temperatura
+    </h1>
+    <label>
+        Celsius
+    </label>
+    <input type="number" id="celsius" onchange="converterCpraF()">
+    <br>
+    <label>
+        Fahrenheit
+    </label>
+    <input type="number" id="fahrenheit" onchange="converterFpraC()">
+    <br>
+    <script>
+        function converterCpraF()
+        {
+            var celsius = parseFloat (document.getElementById("celsius").value);
+            var fahrenheit = (celsius * 9/5) +32;
+            document.getElementById("fahrenheit").value = fahrenheit.toFixed(1);
+            
+        }
+
+        function converterFpraC ()
+        {
+            var fahrenheit = parseFloat (document.getElementById("fahranheit").value);
+            var celsius = (fahrenheit -32)* 5/9;
+            document.getElementById("fahrenheit").value=celsius.toFixed(1);
+            
+        }
+    </script>
+</body>
+</html>

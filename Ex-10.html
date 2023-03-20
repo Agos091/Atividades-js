@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo de contagem de ocorrências de letra em string</title>
+  </head>
+  <body>
+    <p>Insira uma string e uma letra para contar as ocorrências:</p>
+    <input type="text" id="inputString" placeholder="Digite a string aqui...">
+    <input type="text" id="inputLetra" placeholder="Digite a letra aqui...">
+    <button onclick="contarOcorrencias()">Contar ocorrências</button>
+    <p id="outputResultado"></p>
+    
+    <script>
+      function contarOcorrencias() {
+        const string = document.getElementById("inputString").value;
+        const letra = document.getElementById("inputLetra").value;
+        const ocorrencias = (string.match(new RegExp(letra, "g")) || []).length;
+        document.getElementById("outputResultado").innerHTML = `A letra "${letra}" aparece ${ocorrencias} vezes na string "${string}".`;
+      }
+    </script>
+  </body>
+</html>

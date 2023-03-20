@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Exibir habilidades</title>
+  </head>
+  <body>
+    <p id="resultado"></p>
+    
+    <script>
+      const pessoas = [
+        { nome: "João", habilidades: ["Javascript", "ReactJS", "Redux"] },
+        { nome: "Maria", habilidades: ["Java", "Ruby on Rails", "Laravel"] }
+      ];
+
+      function exibirHabilidades() {
+        let resultado = "";
+        for (let i = 0; i < pessoas.length; i++) {
+          const pessoa = pessoas[i];
+          const habilidades = pessoa.habilidades.join(", ");
+          resultado += `O ${pessoa.nome} possui as habilidades: ${habilidades}<br>`;
+        }
+        return resultado;
+      }
+
+      document.getElementById("resultado").innerHTML = exibirHabilidades();
+    </script>
+  </body>
+</html>

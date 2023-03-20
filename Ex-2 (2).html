@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Area e a  Circunferencia de um Circulo</title>
+</head>
+<body>
+    <h1>
+        Calcular Area e a  Circunferencia de um Circulo
+    </h1>
+   <div id="area">
+    Calcular Area Do Circulo
+   </div>
+   <br>
+   <br>
+   <button onclick="CalcularArea()">Calcular Area</button>
+   <br>
+   <br>
+   <div id="Circunferencia">
+    Calcular Circunferencia Do Circulo
+   </div>
+   <br>
+   <button onclick="CalcularCircunferencia()">Calcular Circunferencia</button>
+   <br>
+
+   <script>
+    function CalcularArea()
+    {
+        var area = document.getElementById("area");
+        var raio = prompt('Digite o raio');
+        raio = raio * raio * 3.14
+        area.innerHTML = "Calcular Area Do Circulo"+"<br>"+"O valor da area = " + raio;
+    }
+
+    function CalcularCircunferencia()
+    {
+        var circunferencia = document.getElementById("circunferencia");
+        var raio = prompt('Digite o raio');
+        raio = 2 * 3.14 * raio
+        area.innerHTML = "Calcular Area Do Circulo"+"<br>"+"O valor da circunferencia = " + raio;
+    }
+   </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Inverso de um número</title>
+  </head>
+  <body>
+    <h1>Inverso de um número</h1>
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" name="numero" />
+    <br />
+    <button onclick="mostrarInverso()">Mostrar inverso</button>
+    <br />
+    <div id="resultado"></div>
+
+    <script>
+        function inverterNumero(numero) {
+          var numeroInvertido = "";
+          var tamanhoNumero = numero.length;
+  
+          for (var i = tamanhoNumero - 1; i >= 0; i--) {
+            numeroInvertido += numero[i];
+          }
+  
+          return numeroInvertido;
+        }
+  
+        function mostrarInverso() {
+          var numero = document.getElementById("numero").value;
+          var resultado = inverterNumero(numero);
+  
+          document.getElementById("resultado").innerHTML = resultado;
+        }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Multiplicação de vetor</title>
+  </head>
+  <body>
+    <label for="inputVetor">Digite um vetor de 3 a 6 números, separados por vírgulas:</label>
+    <input type="text" id="inputVetor"><br><br>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <p id="outputResultado"></p>
+    
+    <script>
+      function multiplicar() {
+        const inputVetor = document.getElementById("inputVetor").value.split(",").map(Number);
+        const resultado = inputVetor.reduce((acc, val, idx, arr) => {
+          if (idx < arr.length - 1) {
+            return acc * val * arr[idx + 1];
+          } else {
+            return acc * val * val;
+          }
+        }, 1);
+        document.getElementById("outputResultado").innerHTML = `O resultado da multiplicação é: ${resultado}`;
+      }
+    </script>
+  </body>
+</html>
